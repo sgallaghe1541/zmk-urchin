@@ -28,6 +28,12 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+	td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&sk>, <&kp>;
+        };
 	td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
@@ -46,17 +52,17 @@
 		bindings = <
 		&kp Q &kp W &kp F &kp P &kp G 						&kp J &kp L  &kp U    &kp Y  &kp BKSP
 		&kp A &kp R &kp S &kp T &kp D 			       	                &kp H &kp N &kp E &kp I &kp O
-		&kp Z &kp X &kp C &kp V &kp B				        &kp K &kp M  &td MINUS COMMA &td EXCL DOT &td UNDERSCORE FSLH
-          				&mt LGUI SPC &sk LSHIFT  				&to 1 &sk RCTRL 
+		&kp Z &kp X &kp C &kp V &kp B				                &kp K &kp M  &td MINUS COMMA &td EXCL DOT &td UNDERSCORE FSLH
+          			  &kp SPC &td0 LSHIFT CAPS 		        	&to 1 &td0 RCTRL RWIN 
 		>;
 		};
 
-       		left_layer {
+       		symbol_layer {
 		bindings = <
-		&kp ESC  &kp ATSN   &td LC(LG(LS(N4))) LS(N3) &kp DLLR    &kp PRCNT		&kp CARET &kp LS(COMMA) &kp LS(DOT) &kp SEMI &kp BKSP 
-		&kp TAB    &kp EQUAL    &kp LA(RBKT)      &kp LA(LS(RBKT))     &kp SQT 		&kp BSLH &kp LBRC  &kp RBRC &kp PIPE  &kp ENTER
-		&kp TILDE    &kp LA(N3) 	&kp LA(LBKT) &kp LA(LS(LBKT))  &kp DQT 	&kp LBKT &kp LPRN &kp RPRN &kp RBKT  &to 3 
-					    &to 0  &sk LSHIFT  					&to 2 &sk RALT
+		&kp ESC   &kp ATSN  &kp NUHS &kp DLLR &kp PRCNT			&kp CARET &kp AMPS &kp ASTRK &kp PIPE  &kp BKSP 
+		&kp TAB   &kp LBRC  &kp LPAR &kp LBKT &kp LT 			&kp GT    &kp RBKT &kp RPAR  &kp RBRC  &kp ENTER
+		&kp TILDE &kp GRAVE &kp SQT  &kp DQT  &kp BSLH			&kp FSLH  &kp SEMI &kp COLON &kp QMARK &to 3 
+					     &to 0  &kp DEL  			&to 2 &sk RALT
 		>;
 		};
 		
