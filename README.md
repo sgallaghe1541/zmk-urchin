@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  ![keymap drawio](https://github.com/sgallaghe1541/zmk-urchin/assets/61058279/65a5a5e1-c0dc-4f32-9525-72b6c459b61b)
+  ![keymap drawio](https://github.com/sgallaghe1541/zmk-urchin/assets/61058279/c2453235-9b10-4fd0-8fce-23b38a7fc2f9)
   
 </div>
 
