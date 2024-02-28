@@ -33,7 +33,14 @@
 	    label = "TAPDANCE_0";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            bindings = <&sk>, <&kp>;
+            bindings = <&sk LSHIFT>, <&kp CAPS>;
+        };
+	td0: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+	    label = "TAPDANCE_0";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            bindings = <&sk RCTRL>, <&kp RWIN ;
         };
 	td: tapdance {
             compatible = "zmk,behavior-hold-tap";
@@ -54,7 +61,7 @@
 		&kp Q &kp W &kp F &kp P &kp G 						&kp J &kp L  &kp U    &kp Y  &kp BKSP
 		&kp A &kp R &kp S &kp T &kp D 			       	                &kp H &kp N &kp E &kp I &kp O
 		&kp Z &kp X &kp C &kp V &kp B				                &kp K &kp M  &td MINUS COMMA &td EXCL DOT &td UNDERSCORE FSLH
-          			  &kp SPC &td0 LSHIFT CAPS 		        	&to 1 &td0 RCTRL RWIN 
+          			  &kp SPC &td0 		        	                &to 1 &td1
 		>;
 		};
 
