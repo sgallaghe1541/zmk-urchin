@@ -36,11 +36,6 @@
             flavor = "tap-preferred";
             bindings = <&sk>, <&kp>;
         };
-	td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&sk RCTRL>, <&kp RWIN> ;
         };
 	td: tapdance {
             compatible = "zmk,behavior-hold-tap";
@@ -61,7 +56,7 @@
 		&kp Q &kp W &kp F &kp P &kp G 						&kp J &kp L  &kp U    &kp Y  &kp BKSP
 		&kp A &kp R &kp S &kp T &kp D 			       	                &kp H &kp N &kp E &kp I &kp O
 		&kp Z &kp X &kp C &kp V &kp B				                &kp K &kp M  &td MINUS COMMA &td EXCL DOT &td UNDERSCORE FSLH
-          			  &kp SPC &td0 LSHIFT CAPS		        	&to 1 &td1
+          			  &kp SPC &td0 CAPS LSHIFT		        	&to 1 &td0 RWIN RCTRL
 		>;
 		};
 
@@ -76,8 +71,8 @@
 		
 		number_layer {
 		bindings = <
-		&kp ESC     &kp F2    &kp UP    &kp F4    &trans    			&kp MINUS &kp N7 &kp N8 &kp N9 &kp BKSP
-		&kp TAB     &kp LEFT  &kp DOWN  &kp RIGHT &trans 			&kp ASTRK &kp N4 &kp N5 &kp N6 &kp ENTER
+		&kp ESC     &kp F2    &kp UP    &kp F4    &kp BKSP    			&kp MINUS &kp N7 &kp N8 &kp N9 &kp PLUS
+		&kp TAB     &kp LEFT  &kp DOWN  &kp RIGHT &kp DELETE			&kp ASTRK &kp N4 &kp N5 &kp N6 &kp ENTER
 		&kp LSHIFT  &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(Z)   			&kp FSLH  &kp N1 &kp N2 &kp N3 &kp DOT 
 					        &to 0     &kp LCTRL  			&to 3 &kp N0
 		>;
@@ -88,7 +83,7 @@
 		&kp F1      &kp F2 &kp F3 &kp F4 &kp F5			    &kp F6     &kp F7  &kp F8  &kp F9 &kp F10 
 		&bootloader &trans &trans &trans &trans                     &kp F10    &kp F11 &kp F12 &trans &bootloader 
 		&bt BT_CLR  &trans &trans &trans &bt BT_PRV    	            &bt BT_NXT &trans  &trans  &trans &trans   
-					  &to 0  &trans  		    &trans &to 1 
+					  &to 0  &trans  		    &to 1 &trans 
 		>;
 		};	
         
