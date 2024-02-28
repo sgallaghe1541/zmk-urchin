@@ -2,8 +2,8 @@
 
 <div align="center">
   
-  ![sweep-layout](https://user-images.githubusercontent.com/27895007/185715593-69f9f981-ae17-4788-b2a8-d1360c65622a.svg)
-
+  ![keymap drawio](https://github.com/sgallaghe1541/zmk-urchin/assets/61058279/e6b25bd9-dc31-427c-b24b-b82c4949f22f)
+  
 </div>
 
 *This diagram was created using draw.io*  
