@@ -34,7 +34,7 @@
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&sk>, <&kp>;
+            bindings = <&kp>, <&sk>;
         };
 	td: tapdance {
             compatible = "zmk,behavior-hold-tap";
