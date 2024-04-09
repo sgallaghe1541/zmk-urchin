@@ -10,7 +10,7 @@
 #define FRML(k1, k2, k3, k4, k5) &ht F1 k1 &ht F2 k2 &ht F3 k3 &ht F4 k4 &ht F5 k5
 #define FRMR(k1, k2, k3, k4, k5) &ht F6 k1 &ht F7 k2 &ht F8 k3 &ht F9 k4 &ht F10 k5
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2 &ht LCTRL k3 &ht LSHIFT k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1 &ht RALT k2 &ht RCTRL k3 &ht RSHIFT k4
+#define HRMR(k1,k2,k3,k4) &ht RSHIFT k1 &ht RCTRL k2 &ht RALT k3 &ht RGUI k4
 
 #define COL 0
 #define QWE 1
@@ -43,7 +43,7 @@
         compatible = "zmk,combos";
         combo_adm_layer {
             timeout-ms = <50>;
-            key-positions = <27 30>;
+            key-positions = <29 32>;
             bindings = <&to ADM>;
         };
     };
@@ -62,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  K       │  M       │ , -      │ . !      │  /  _    │
             &kp Z      &kp X      &kp C      &kp V      &kp B         &kp K    &kp M  &ht MINUS COMMA  &ht EXCL DOT    &ht UNDERSCORE FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPC    &kp ESC    &mo_to SYM NUM  &ht COLON SEMI
+                                             &kp ESC     &kp SPC  &mo_to SYM NUM  &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -79,7 +79,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ ENTER    │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPC    &kp ESC    &mo_to SYM NUM &ht COLON SEMI
+                                             &kp ESC    &kp SPC     &mo_to SYM NUM &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -96,7 +96,7 @@
         //│   ~      │    `     │    '     │    "     │    \     │   │    /     │    ;     │    :     │    ?     │          │
            &kp TILDE   &kp GRAVE  &kp SQT    &kp DQT    &kp BSLH       &kp FSLH   &kp SEMI   &kp COLON  &kp QMARK  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPC    &kp ESC        &trans     &trans
+                                             &kp ESC    &kp SPC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -113,7 +113,7 @@
         //│ LSHIFT   │  *x      │  *c      │  *v      │   *z     │   │    /     │    1     │    2     │    3     │    .     │
            &kp LSHIFT  &kp LC(X) &kp LC(C)  &kp LC(V)   &kp LC(Z)      &kp FSLH  &kp N1      &kp N2     &kp N3     &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to COL   &trans         &trans     &kp N0
+                                             &to COL   &kp SPC          &kp N0     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
