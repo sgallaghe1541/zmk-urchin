@@ -88,7 +88,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ =        │  @       │  #       │  $       │  %       │   │ ^        │ &        │ *        │ |        │BACKSPACE |
-          &kp KP_EQUAL &kp ATSN   &kp HASH  &kp DOLLAR &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR   &kp PIPE    &kp BSPC
+          &kp EQUAL    &kp ATSN   &kp HASH  &kp DOLLAR &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR   &kp PIPE    &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ TAB      │   {      │   (      │    [     │   <      |   |    >     │   ]      │    )     │    }     │   ENTER  │
            HRML(TAB,    LBRC,      LPAR,       LBKT)     &kp LT         &kp GT   HRMR(RBKT,    RPAR,      RBRC,      ENTER)
