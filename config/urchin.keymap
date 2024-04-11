@@ -7,8 +7,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
-#define FRML(k1, k2, k3, k4, k5) &ht F1 k1 &ht F2 k2 &ht F3 k3 &ht F4 k4 &ht F5 k5
-#define FRMR(k1, k2, k3, k4, k5) &ht F6 k1 &ht F7 k2 &ht F8 k3 &ht F9 k4 &ht F10 k5
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2 &ht LCTRL k3 &ht LSHIFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHIFT k1 &ht RCTRL k2 &ht RALT k3 &ht RGUI k4
 
@@ -63,7 +61,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  K       │  M       │ , -      │ . !      │  /  _    │
             &kp Z      &kp X      &kp C      &kp V      &kp B         &kp K    &kp M  &ht MINUS COMMA  &ht EXCL DOT    &ht UNDERSCORE FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp ESC     &kp SPC  &mo_to SYM NUM  &ht COLON SEMI
+                                             &kp SPC    &kp ESC     &mo_to SYM NUM  &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -80,7 +78,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ ENTER    │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp ESC    &kp SPC     &mo_to SYM NUM &ht COLON SEMI
+                                             &kp SPC    &kp ESC    &mo_to SYM NUM &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -97,7 +95,7 @@
         //│   ~      │    `     │    '     │    "     │    \     │   │    /     │    ;     │    :     │    ?     │          │
            &kp TILDE   &kp GRAVE  &kp SQT    &kp DQT    &kp BSLH       &kp FSLH   &kp SEMI   &kp COLON  &kp QMARK  &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp ESC    &kp SPC        &trans     &trans
+                                             &kp SPC     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
