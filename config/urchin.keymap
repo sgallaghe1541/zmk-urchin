@@ -130,13 +130,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Y       │  C       │  L       │  M       │  K       │   │  Z       │  F       │  U       │  , -     |BACKSPACE │
-            &kp Y      &kp C      &kp L      &kp M      &kp K          &kp Z      &kp F      &kp U    &ht EXCL DOT  &kp BSPC
+            &kp Y      &kp C      &kp L      &kp M      &kp K          &kp Z      &kp F      &kp U    &ht MINUS COMMA  &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  I       │  S       │  R       │  T       │  G       │   │  P       │  N       │  E       │  A       │  O       │
             HRML(I,        S,         R,         T)     &kp G          &kp P      HRMR(N,        E,        A,         O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Q       │  V       │  W       │  D       │  J       │   │  B       │  H       │   / _    │ . !      │    X     │
-            &kp Q      &kp V      &kp W      &kp D      &kp J         &kp B    &kp H  &ht UNDERSCORE FSL &ht EXCL DOT  &kp X
+            &kp Q      &kp V      &kp W      &kp D      &kp J         &kp B    &kp H  &ht UNDERSCORE FSLH &ht EXCL DOT  &kp X
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ESC     &kp SPC  &mo_to SYM NUM  &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
