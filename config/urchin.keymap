@@ -15,7 +15,7 @@
 #define SYM 2
 #define NUM 3
 #define ADM 4
-#define ISR 5
+#define STU 5
 
 / {
     behaviors {
@@ -121,22 +121,22 @@
             bindings = <
                 &kp F1      &kp F2 &kp F3 &kp F4 &kp F5			    &kp F6     &kp F7  &kp F8  &kp F9 &kp F10
 		&bootloader &trans &trans &trans &trans                     &kp F10    &kp F11 &kp F12 &trans &bootloader
-		&bt BT_CLR  &to QWE &to ISR &trans &bt BT_PRV    	            &bt BT_NXT &trans  &trans  &trans &trans
+		&bt BT_CLR  &to QWE &to STU &trans &bt BT_PRV    	            &bt BT_NXT &trans  &trans  &trans &trans
 					  &to COL  &trans 		    &trans &trans 
             >;
         };
 
-        isrt_layer {
+        stury_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Y       │  C       │  L       │  M       │  K       │   │  Z       │  F       │  U       │  , -     |BACKSPACE │
-            &kp Y      &kp C      &kp L      &kp M      &kp K          &kp Z      &kp F      &kp U    &ht MINUS COMMA  &kp BSPC
+        //│  V       │  M       │  L       │  C       │  P       │   │  X       │  F       │  O       │    U     |BACKSPACE │
+            &kp V      &kp M      &kp L      &kp C      &kp P          &kp X      &kp F      &kp O       &kp U     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  I       │  S       │  R       │  T       │  G       │   │  P       │  N       │  E       │  A       │  O       │
-            HRML(I,        S,         R,         T)     &kp G          &kp P      HRMR(N,        E,        A,         O)
+        //│  S       │  T       │  R       │  D       │  Y       │   │  . !     │  N       │    A     │    E     │    I     │
+            HRML(S,        T,         R,         D)     &kp Y        &ht EXCL DOT HRMR(N,        A,        E,         I)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Q       │  V       │  W       │  D       │  J       │   │  B       │  H       │   / _    │ . !      │    X     │
-            &kp Q      &kp V      &kp W      &kp D      &kp J         &kp B    &kp H  &ht UNDERSCORE FSLH &ht EXCL DOT  &kp X
+        //│  Z       │  K       │  Q       │  G       │  W       │   │  B       │  H       │   , -    │ / _      │    J     │
+            &kp Z      &kp K      &kp Q      &kp G      &kp W         &kp B      &kp H  &ht MINUS COMMA &ht UNDERSCORE FSLH  &kp J
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ESC     &kp SPC  &mo_to SYM NUM  &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
