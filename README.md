@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![keymap](https://github.com/sgallaghe1541/zmk-urchin/assets/61058279/5efe7d2b-87f5-4092-8e0d-831846d0858e)
+![keymap drawio](https://github.com/sgallaghe1541/zmk-urchin/assets/61058279/39890366-3f6c-4286-b41b-6ecc35d5e9c1)
+
 
 </div>
 
