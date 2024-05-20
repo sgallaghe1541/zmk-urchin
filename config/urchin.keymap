@@ -10,12 +10,12 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1 &ht LALT k2 &ht LCTRL k3 &ht LSHIFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHIFT k1 &ht RCTRL k2 &ht RALT k3 &ht RGUI k4
 
-#define COL 0
+#define STR 0
 #define QWE 1
 #define SYM 2
 #define NUM 3
 #define ADM 4
-#define STR 5
+#define COL 5
 
 / {
     behaviors {
@@ -49,19 +49,19 @@
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+        strdy_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  G       │   │  J       │  L       │  U       │  Y       |BACKSPACE │
-            &kp Q      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp BSPC
+        //│  V       │  M       │  L       │  C       │  P       │   │  X       │  F       │  O       │    U     |BACKSPACE │
+            &kp V      &kp M      &kp L      &kp C      &kp P          &kp X      &kp F      &kp O       &kp U     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  D       │   │  H       │  N       │  E       │  I       │  O       │
-            HRML(A,        R,         S,         T)     &kp D          &kp H      HRMR(N,        E,        I,         O)
+        //│  S       │  T       │  R       │  D       │  Y       │   │    J     │  N       │    A     │    E     │    I     │
+            HRML(S,        T,         R,         D)     &kp Y           &kp J     HRMR(N,        A,        E,         I)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  K       │  M       │ , -      │ . !      │  /  _    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B         &kp K    &kp M  &ht MINUS COMMA  &ht EXCL DOT    &ht UNDERSCORE FSLH
+        //│  Z       │  K       │  Q       │  G       │  W       │   │  B       │  H       │   , -    │   . !    │   / _    │
+            &kp Z      &kp K      &kp Q      &kp G      &kp W         &kp B      &kp H  &ht MINUS COMMA &ht EXCL DOT &ht UNDERSCORE FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp ESC     &kp SPC     &mo_to SYM NUM  &ht COLON SEMI
+                                             &kp ESC     &kp SPC  &mo_to SYM NUM  &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -112,7 +112,7 @@
         //│ LSHIFT   │  *x      │  *c      │  *v      │   *z     │   │    /     │    1     │    2     │    3     │    .     │
            &kp LSHIFT  &kp LC(X) &kp LC(C)  &kp LC(V)   &kp LC(Z)      &kp FSLH  &kp N1      &kp N2     &kp N3     &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to COL   &kp SPC          &kp N0    &kp PLUS
+                                             &kp SPC     &to STR        &kp N0    &kp PLUS
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -121,24 +121,24 @@
             bindings = <
                 &kp F1      &kp F2 &kp F3 &kp F4 &kp F5			    &kp F6     &kp F7  &kp F8  &kp F9 &kp F10
 		&bootloader &trans &trans &trans &trans                     &kp F10    &kp F11 &kp F12 &trans &bootloader
-		&bt BT_CLR  &to QWE &to STR &trans &bt BT_PRV    	            &bt BT_NXT &trans  &trans  &trans &trans
-					  &to COL  &trans 		    &trans &trans 
+		&bt BT_CLR  &to QWE &to COL &trans &bt BT_PRV    	            &bt BT_NXT &trans  &trans  &trans &trans
+					  &to STR  &trans 		    &trans &trans 
             >;
         };
 
-        strdy_layer {
+         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  V       │  M       │  L       │  C       │  P       │   │  X       │  F       │  O       │    U     |BACKSPACE │
-            &kp V      &kp M      &kp L      &kp C      &kp P          &kp X      &kp F      &kp O       &kp U     &kp BSPC
+        //│  Q       │  W       │  F       │  P       │  G       │   │  J       │  L       │  U       │  Y       |BACKSPACE │
+            &kp Q      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  S       │  T       │  R       │  D       │  Y       │   │    J     │  N       │    A     │    E     │    I     │
-            HRML(S,        T,         R,         D)     &kp Y           &kp J     HRMR(N,        A,        E,         I)
+        //│  A       │  R       │  S       │  T       │  D       │   │  H       │  N       │  E       │  I       │  O       │
+            HRML(A,        R,         S,         T)     &kp D          &kp H      HRMR(N,        E,        I,         O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  K       │  Q       │  G       │  W       │   │  B       │  H       │   , -    │   . !    │   / _    │
-            &kp Z      &kp K      &kp Q      &kp G      &kp W         &kp B      &kp H  &ht MINUS COMMA &ht EXCL DOT &ht UNDERSCORE FSLH
+        //│  Z       │  X       │  C       │  V       │  B       │   │  K       │  M       │ , -      │ . !      │  /  _    │
+            &kp Z      &kp X      &kp C      &kp V      &kp B         &kp K    &kp M  &ht MINUS COMMA  &ht EXCL DOT    &ht UNDERSCORE FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp ESC     &kp SPC  &mo_to SYM NUM  &ht COLON SEMI
+                                             &kp ESC     &kp SPC     &mo_to SYM NUM  &ht COLON SEMI
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
