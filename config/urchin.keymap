@@ -45,6 +45,11 @@
             key-positions = <29 32>;
             bindings = <&to ADM>;
         };
+        combo_caps_lock {
+           timeout-ms = <50>;
+           key-positions = <13 16>
+           bindings = <&kp CAPS>
+        }
     };
 
     keymap {
@@ -120,8 +125,8 @@
         tri_layer {
             bindings = <
                 &kp F1      &kp F2 &kp F3 &kp F4 &kp F5			    &kp F6     &kp F7  &kp F8  &kp F9 &kp F10
-		&bootloader &trans &trans &trans &trans                     &kp F10    &kp F11 &kp F12 &trans &bootloader
-		&bt BT_CLR  &to QWE &to COL &trans &bt BT_PRV    	            &bt BT_NXT &trans  &trans  &trans &trans
+		&bootloader &trans &trans &trans &trans                     &kp F11    &kp F12 &kp K_VOL_UP &trans &bootloader
+		&bt BT_CLR  &to QWE &to COL &trans &bt BT_PRV    	    &bt BT_NXT &trans  &kp K_VOL_DN  &trans &trans
 					  &to STR  &trans 		    &trans &trans 
             >;
         };
