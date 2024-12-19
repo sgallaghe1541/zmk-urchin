@@ -114,8 +114,8 @@
         //│  TAB     │  LEFT    │  DOWN    │  RIGHT   │  DEL     │   │   *      │    4     │    5     │    6     │  ENTER   │
             &kp TAB    &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL       &kp ASTRK    &kp N4     &kp N5     &kp N6    &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ LSHIFT   │  *x      │  *c      │  *v      │   *z     │   │    /     │    1     │    2     │    3     │    .     │
-           &kp LSHIFT  &kp LC(X) &kp LC(C)  &kp LC(V)   &kp LC(Z)      &kp FSLH  &kp N1      &kp N2     &kp N3     &kp DOT
+        //│ LSHIFT   │          │          │     ,    │          │   │    /     │    1     │    2     │    3     │    .     │
+           &kp LSHIFT   &trans     &trans   &kp COMMA   &trans         &kp FSLH  &kp N1      &kp N2     &kp N3     &kp DOT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp SPC     &to STR        &kp N0    &kp PLUS
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
