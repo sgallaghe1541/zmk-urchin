@@ -14,9 +14,9 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: urchin_left
+    shield: urchin_left nice_view
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano_v2
-    shield: urchin_right
+    shield: urchin_right nice_view
   - board: nice_nano_v2
     shield: settings_reset
